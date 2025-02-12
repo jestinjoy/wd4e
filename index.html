@@ -1,43 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Springtime In Michigan</title>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. George's College - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* Skip to Main Content */
+        a.skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: #004080;
+            color: white;
+            padding: 10px;
+            z-index: 100;
+            text-decoration: none;
+        }
+        
+        a.skip-link:focus {
+            top: 10px;
+        }
+
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+        }
+
+        nav {
+            display: inline-block;
+            width: 100%;
+            background: #333;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Commenting out previous li styling */
+        /* nav ul li {
+            padding: 15px 20px;
+            color: white;
+            cursor: pointer;
+        } */
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        /* Style only the image inside the nav */
+        nav img {
+            width: 10%;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+            column-gap: 20px;
+            padding: 20px;
+        }
+
+        /* Style only images in the grid */
+        .grid img {
+            width: 100%;
+        }
+
+        /* Flex Layout */
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="neighborhood.html">Neighborhood Walks</a></li>
-        <li><a href="parks.html">Walks in the Park</a></li>
-      </ul>
-    </nav>
-    <img src="images/BaconGallupPark.jpg" width="200" alt="Brown Labradoodle sitting next to a statue.">
-    <h1>Springtime in Michigan</h1>
-  </header>
-  <main>
-    <p>Springtime in <a href="https://www.michigan.org/city/ann-arbor">Ann Arbor</a> is a beautiful time. Even though
-      it can be chilly at times, it is nice to walk my dog Bacon. This site includes some pictures I have taken on
-      these walks. </p>
 
-    <p>Sometimes we walk around the neighborhood, other times we make it to the woods. Ann Arbor also has some
-      beautiful lakes and rivers including the <a
-        href="https://www.annarbor.org/things-to-do/recreation-outdoors/huron-river/">Huron River Watertrail</a> and
-      the <a href="https://www.a2gov.org/departments/Parks-Recreation/parks-places/argo/pages/default.aspx">Argo Park
-        Cascades</a>.</p>
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
 
-  </main>
-  <footer>
-    <p>This page was originally created by Colleen van Lent for the <a
-        href="https://www.coursera.org/specializations/web-design"> Web Design for Everybody</a> Specialization.
-      Specialization. Students are invited to make changes.</p>
-  </footer>
+<header>
+    Welcome to St. George's College
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<main id="main-content">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>St. George's College is a premier institution committed to academic excellence, innovation, and holistic education.</p>
+
+        <h2>Our Departments</h2>
+        <p>We offer programs in Computer Applications, Commerce, Science, and Humanities.</p>
+
+        <h2>Join Us</h2>
+        <p>Admissions are open for the upcoming academic year. Apply now!</p>
+    </div>
+
+    <div class="grid">
+        <img src="campus1.jpg"  height="450px" alt="Campus Image 1">
+        <img src="campus2.jpeg" height="450px" alt="Campus Image 2">
+    </div>
+
+    <div class="flex">
+        <div class="container">
+            <h3>Student Life</h3>
+            <p>Experience vibrant campus life with clubs, events, and student organizations.</p>
+        </div>
+        <div class="container">
+            <h3>Research & Innovation</h3>
+            <p>We encourage cutting-edge research and innovation in various fields.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; 2025 St. George's College | All Rights Reserved
+</footer>
 
 </body>
-
 </html>
+
